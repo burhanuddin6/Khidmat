@@ -1,11 +1,14 @@
 # Demonstrates indexing into a dict
 
 students = {
-    "Hermione": "Gryffindor",
-    "Harry": "Gryffindor",
-    "Ron": "Gryffindor",
-    "Draco": "Slytherin",
+    "Hermione": "0",
+    "Harry": "1",
+    "Ron": "2",
+    "Draco": "3",
 }
+
+students = []
+students = {}
 
 print(students["Hermione"])
 print(students["Harry"])
