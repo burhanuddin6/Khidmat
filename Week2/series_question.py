@@ -4,79 +4,42 @@ import pandas as pd
 # Part 1: Creating a Pandas Series
 # ===============================================
 
-# Step 1: Create a simple Pandas Series with the following values: [5, 10, 15, 20, 25]
+# Step 1: Create a simple Pandas Series
+# TODO 1: Create a Pandas Series with the following values: [10, 20, 30, 40, 50]
 #         and assign it to a variable called `s1`.
+# Hint: Use `pd.Series()` function.
 
-# Hint: Use the `pd.Series()` function. You can pass a list of values to it.
-
-s1 = pd.Series([5, 10, 15, 20, 25])
-print("Part 1 - Simple Series:")
-print(s1)
-print("\n")
-
-# Step 2: Create another Pandas Series with custom indexes. 
-#         Use the following data: [50, 100, 150, 200]
-#         Assign it to a variable called `s2`, and use indexes ['a', 'b', 'c', 'd'].
-
-# Hint: Provide a list of index values using the `index` parameter in `pd.Series()`.
-
-s2 = pd.Series([50, 100, 150, 200], index=['a', 'b', 'c', 'd'])
-print("Part 2 - Series with Custom Indexes:")
-print(s2)
-print("\n")
+# Step 2: Create a Series with custom indexes.
+# TODO 2: Create a Pandas Series with the following data: [100, 200, 300, 400]
+#         and assign it to a variable called `s2`, but this time provide custom index labels.
+#         Use the following indexes: ['a', 'b', 'c', 'd']
+# Hint: Pass the `index` parameter while creating the Series.
 
 # ===============================================
 # Part 2: Accessing and Manipulating Data in Series
 # ===============================================
 
-# Step 3: Access the value at index 'c' in the `s2` Series.
+# Step 3: Access a specific value.
+# TODO 3: Access the value corresponding to the index 'c' in the `s2` Series.
+# Hint: Use the index directly like `s2['c']`.
 
-# Hint: You can access values using the index like `s2['c']`.
+# Step 4: Perform arithmetic operations on Series.
+# TODO 4: Add `s1` and `s2` element-wise, but first ensure that both Series have the same indexes.
+# Hint: Use `.reindex()` if necessary to match the indexes.
 
-value_c = s2['c']
-print("Part 3 - Accessing value at index 'c' in s2:")
-print(value_c)
-print("\n")
+# Step 5: Perform a mathematical operation on a Series.
+# TODO 5: Multiply `s1` by 2 and print the result.
+# Hint: You can multiply a Series by a scalar value directly.
 
-# Step 4: Add `s1` and `s2` element-wise. 
-#         Make sure that the indexes in both Series match before performing the operation.
-
-# Hint: You might need to reindex `s1` or `s2` to match each other. Use `reindex()` if needed.
-
-# First, let's reindex s1 to match the indexes of s2.
-s1_reindexed = s1.reindex(['a', 'b', 'c', 'd', 'e'])
-print("Part 4 - Adding s1 and s2 element-wise after reindexing:")
-print(s1_reindexed + s2)
-print("\n")
-
-# Step 5: Multiply `s1` by 3.
-
-# Hint: You can multiply a Series by a scalar directly (like `s1 * 3`).
-
-s1_multiplied = s1 * 3
-print("Part 5 - Multiply s1 by 3:")
-print(s1_multiplied)
-print("\n")
-
-# Step 6: Filter out values in `s1` that are greater than 15.
-
-# Hint: You can filter values in a Series by applying a condition like `s1[s1 > 15]`.
-
-filtered_values = s1[s1 > 15]
-print("Part 6 - Filter values in s1 greater than 15:")
-print(filtered_values)
-print("\n")
+# Step 6: Filter values in a Series based on a condition.
+# TODO 6: Print all values in `s1` that are greater than 20.
+# Hint: Use a condition like `s1 > 20` to filter the values.
 
 # ===============================================
-# Part 3: Additional Task
+# Part 3: Additional Tasks
 # ===============================================
 
-# Step 7: Create a Series where the indexes are ['one', 'two', 'three', 'four', 'five']
-#         and the values are the squares of the numbers 1, 2, 3, 4, 5. 
-#         Assign it to a variable called `squares_series`.
-
-# Hint: You can manually create the squares of numbers from 1 to 5 or use a loop/list comprehension.
-
-squares_series = pd.Series([1, 4, 9, 16, 25], index=['one', 'two', 'three', 'four', 'five'])
-print("Part 7 - Series of squares from 1 to 5:")
-print(squares_series)
+# Step 7: Create a Series of squares of numbers from 1 to 5.
+# TODO 7: Create a Series where the indexes are ['one', 'two', 'three', 'four', 'five'] 
+#         and the corresponding values are the squares of the numbers 1 to 5.
+# Hint: You can use a list comprehension or just hard-code the values.
